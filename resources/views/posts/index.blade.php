@@ -7,5 +7,22 @@
 </head>
 <body>
     <h1>投稿一覧</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>タイトル</th>
+                <th>本文</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($posts as $post)
+                <tr>
+                    <td>{{ $post->タイトル }}</td>
+                    <td>{{ $post->本文 }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </body>
 </html>
